@@ -1,3 +1,3 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "Program"
+mainClassName = "sii.stqa.pft.sandbox.Program"
