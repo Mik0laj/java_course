@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sii.stqa.pft.addressbook.GroupCreationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-06T14:16:04" hostname="DESKTOP-LAA6JF6" time="1.912">
+  <properties/>
+  <testcase name="testGroupCreation" classname="sii.stqa.pft.addressbook.GroupCreationTest" time="1.912"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+]]></system-err>
+</testsuite>
