@@ -5,8 +5,17 @@ public class Point {
   double x;
   double y;
 
-  public double distance (Point p){
-    return Math.sqrt((Math.pow((this.x-p.x),2))+(Math.pow((this.y-p.y),2)));
+  public Point() {
+
+  }
+
+  public Point(double x, double y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  public double distance(Point p) {
+    return Math.round(Math.sqrt((Math.pow((this.x - p.x), 2)) + (Math.pow((this.y - p.y), 2)))*100)/100.00;
   }
 
 }

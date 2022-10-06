@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Gradle suite" duration-ms="14" started-at="2022-10-06T11:17:13Z" finished-at="2022-10-06T11:17:13Z">
+    <groups>
+    </groups>
+    <test name="Gradle test" duration-ms="14" started-at="2022-10-06T11:17:13Z" finished-at="2022-10-06T11:17:13Z">
+      <class name="sii.stqa.pft.sandbox.SquareTests">
+        <test-method status="PASS" signature="testArea()[pri:0, instance:sii.stqa.pft.sandbox.SquareTests@44a664f2]" name="testArea" duration-ms="6" started-at="2022-10-06T13:17:13Z" finished-at="2022-10-06T13:17:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArea -->
+      </class> <!-- sii.stqa.pft.sandbox.SquareTests -->
+    </test> <!-- Gradle test -->
+  </suite> <!-- Gradle suite -->
+</testng-results>
