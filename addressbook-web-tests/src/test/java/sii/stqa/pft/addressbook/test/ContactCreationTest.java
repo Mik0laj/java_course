@@ -1,4 +1,4 @@
-package sii.stqa.pft.addressbook;
+package sii.stqa.pft.addressbook.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import sii.stqa.pft.addressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +25,7 @@ public class ContactCreationTest {
   @Test
   public void testContactCreation() throws Exception {
     initContactCreation();
-    fillContactForm(new contactData("Name", "Surname", "Address", "123456789", "test@test.pl"));
+    fillContactForm(new ContactData("Name", "Surname", "Address", "123456789", "test@test.pl"));
     submitContactCreation();
     returnToHomePage();
   }
@@ -37,7 +38,7 @@ public class ContactCreationTest {
     wd.findElement(By.xpath("//input[21]")).click();
   }
 
-  private void fillContactForm(contactData contactData) {
+  private void fillContactForm(ContactData contactData) {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstName());

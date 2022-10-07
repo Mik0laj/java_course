@@ -1,13 +1,13 @@
-package sii.stqa.pft.addressbook;
+package sii.stqa.pft.addressbook.model;
 
-public class contactData {
+public class ContactData {
   private final String firstName;
   private final String lastName;
   private final String address;
   private final String phoneNumber;
   private final String email;
 
-  public contactData(String firstName, String lastName, String address, String phoneNumber, String email) {
+  public ContactData(String firstName, String lastName, String address, String phoneNumber, String email) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.address = address;
