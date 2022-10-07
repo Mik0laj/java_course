@@ -1,11 +1,8 @@
 package sii.stqa.pft.addressbook.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import sii.stqa.pft.addressbook.appmanager.ApplicationManager;
-import sii.stqa.pft.addressbook.model.ContactData;
 
 public class TestBase {
 
@@ -20,6 +17,4 @@ public class TestBase {
   public void tearDown() throws Exception {
     app.stop();
   }
-
-
 }
