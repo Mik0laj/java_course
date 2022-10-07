@@ -1,6 +1,5 @@
 package sii.stqa.pft.addressbook.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -24,9 +23,8 @@ public class ApplicationManager {
   }
 
 
-
   public void stop() {
-    wd.findElement(By.linkText("Logout")).click();
+    sessionHelper.logout();
     wd.quit();
   }
 
