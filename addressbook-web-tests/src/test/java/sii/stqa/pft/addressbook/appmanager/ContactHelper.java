@@ -32,7 +32,9 @@ public class ContactHelper extends HelperBase {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
   }
-
+  public void initContactCreation() {
+    click(By.linkText("add new"));
+  }
   public void initContactModification() {
     click(By.xpath("//img[@alt='Edit']"));
   }
