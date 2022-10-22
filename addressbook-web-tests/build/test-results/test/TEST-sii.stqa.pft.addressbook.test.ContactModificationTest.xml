@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sii.stqa.pft.addressbook.test.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-22T19:37:55" hostname="DESKTOP-LAA6JF6" time="1.522">
+  <properties/>
+  <testcase name="testContactModification" classname="sii.stqa.pft.addressbook.test.ContactModificationTest" time="1.522"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
