@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sii.stqa.pft.addressbook.test.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-22T19:37:53" hostname="DESKTOP-LAA6JF6" time="0.166">
-  <properties/>
-  <testcase name="testContactDeletion" classname="sii.stqa.pft.addressbook.test.ContactDeletionTest" time="0.166"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
