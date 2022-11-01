@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sii.stqa.pft.addressbook.test.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-24T16:05:12" hostname="DESKTOP-LAA6JF6" time="2.554">
+<testsuite name="sii.stqa.pft.addressbook.test.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-01T21:02:18" hostname="DESKTOP-LAA6JF6" time="1.785">
   <properties/>
-  <testcase name="testGroupModification" classname="sii.stqa.pft.addressbook.test.GroupModificationTest" time="2.554"/>
+  <testcase name="testGroupModification" classname="sii.stqa.pft.addressbook.test.GroupModificationTest" time="1.785"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
