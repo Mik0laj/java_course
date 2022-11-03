@@ -3,12 +3,39 @@ package sii.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
+  private final String id;
   private final String firstName;
   private final String lastName;
   private final String address;
   private final String phoneNumber;
   private final String email;
   private String group;
+
+  public ContactData(String id,String firstName, String lastName, String address, String phoneNumber, String email, String group) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.phoneNumber = phoneNumber;
+    this.email = email;
+    this.group = group;
+  }
+
+
+
+  public ContactData(String firstName, String lastName, String address, String phoneNumber, String email, String group) {
+    this.id = null;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.phoneNumber = phoneNumber;
+    this.email = email;
+    this.group = group;
+  }
+
+  public String getId() {
+    return id;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -17,13 +44,15 @@ public class ContactData {
 
     ContactData that = (ContactData) o;
 
+    if (!Objects.equals(id, that.id)) return false;
     if (!Objects.equals(firstName, that.firstName)) return false;
     return Objects.equals(lastName, that.lastName);
   }
 
   @Override
   public int hashCode() {
-    int result = firstName != null ? firstName.hashCode() : 0;
+    int result = id != null ? id.hashCode() : 0;
+    result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
     result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
     return result;
   }
@@ -31,18 +60,10 @@ public class ContactData {
   @Override
   public String toString() {
     return "ContactData{" +
-            "firstName='" + firstName + '\'' +
+            "id='" + id + '\'' +
+            ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
             '}';
-  }
-
-  public ContactData(String firstName, String lastName, String address, String phoneNumber, String email, String group) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.address = address;
-    this.phoneNumber = phoneNumber;
-    this.email = email;
-    this.group = group;
   }
 
   public String getFirstName() {
