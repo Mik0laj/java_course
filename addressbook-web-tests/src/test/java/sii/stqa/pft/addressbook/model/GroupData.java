@@ -3,9 +3,6 @@ package sii.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class GroupData {
-  public void setId(int id) {
-    this.id = id;
-  }
 
   private int id;
   private final String name;
@@ -18,6 +15,21 @@ public class GroupData {
     this.name = name;
     this.header = header;
     this.footer = footer;
+  }
+
+  public GroupData(String name, String header, String footer) {
+    this.id = 0;
+    this.name = name;
+    this.header = header;
+    this.footer = footer;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public int getId() {
+    return id;
   }
 
   @Override
@@ -38,12 +50,14 @@ public class GroupData {
     return result;
   }
 
-  public GroupData(String name, String header, String footer) {
-    this.id = 0;
-    this.name = name;
-    this.header = header;
-    this.footer = footer;
+  @Override
+  public String toString() {
+    return "GroupData{" +
+            "id='" + id + '\'' +
+            ", name='" + name + '\'' +
+            '}';
   }
+
   public String getName() {
     return name;
   }
@@ -56,15 +70,5 @@ public class GroupData {
     return footer;
   }
 
-  @Override
-  public String toString() {
-    return "GroupData{" +
-            "id='" + id + '\'' +
-            ", name='" + name + '\'' +
-            '}';
-  }
 
-  public int getId() {
-    return id;
-  }
 }

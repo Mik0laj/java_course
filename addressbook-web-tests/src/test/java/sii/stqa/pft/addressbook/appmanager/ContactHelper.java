@@ -36,9 +36,11 @@ public class ContactHelper extends HelperBase {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
   }
+
   public void initContactCreation() {
     click(By.linkText("add new"));
   }
+
   public void initContactModification(int index) {
     wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
   }
@@ -77,10 +79,10 @@ public class ContactHelper extends HelperBase {
   public List<ContactData> getContactList() {
     List<ContactData> contacts = new ArrayList<ContactData>();
     List<WebElement> elements = wd.findElements((By.name("entry")));
-    for(WebElement element : elements){
+    for (WebElement element : elements) {
       String[] name = element.getText().split(" ");
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData(id, name[1], name[0],null,null,null,null);
+      ContactData contact = new ContactData(id, name[1], name[0], null, null, null, null);
       contacts.add(contact);
     }
     return contacts;

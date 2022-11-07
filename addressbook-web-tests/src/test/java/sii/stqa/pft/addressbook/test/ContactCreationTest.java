@@ -8,12 +8,12 @@ import sii.stqa.pft.addressbook.model.GroupData;
 import java.util.HashSet;
 import java.util.List;
 
-public class ContactCreationTest extends TestBase{
+public class ContactCreationTest extends TestBase {
 
   @Test
   public void testContactCreation() throws Exception {
     app.getNavigationHelper().gotoGroupPage();
-    if(! app.getGroupHelper().isThereAGroup()){
+    if (!app.getGroupHelper().isThereAGroup()) {
       app.getGroupHelper().createGroup(new GroupData("test1", null, null));
     }
     app.getNavigationHelper().gotoHomePage();
@@ -24,13 +24,13 @@ public class ContactCreationTest extends TestBase{
     Assert.assertEquals(after.size(), before.size() + 1);
 
     int max = 0;
-    for (ContactData g :after){
-      if (g.getId()>max){
-        max=g.getId();
+    for (ContactData g : after) {
+      if (g.getId() > max) {
+        max = g.getId();
       }
     }
     contact.setId(max);
     before.add(contact);
-    Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
+    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
   }
 }

@@ -19,14 +19,14 @@ public class GroupCreationTest extends TestBase {
     Assert.assertEquals(after.size(), before.size() + 1);
 
     int max = 0;
-    for (GroupData g :after){
-      if (g.getId()>max){
-        max=g.getId();
+    for (GroupData g : after) {
+      if (g.getId() > max) {
+        max = g.getId();
       }
     }
     group.setId(max);
     before.add(group);
-    Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
+    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
   }
 
 }
