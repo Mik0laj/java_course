@@ -3,7 +3,7 @@ package sii.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-  private final String id;
+  private int id;
   private final String firstName;
   private final String lastName;
   private final String address;
@@ -11,7 +11,7 @@ public class ContactData {
   private final String email;
   private String group;
 
-  public ContactData(String id,String firstName, String lastName, String address, String phoneNumber, String email, String group) {
+  public ContactData(int id,String firstName, String lastName, String address, String phoneNumber, String email, String group) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -24,7 +24,7 @@ public class ContactData {
 
 
   public ContactData(String firstName, String lastName, String address, String phoneNumber, String email, String group) {
-    this.id = null;
+    this.id = 0;
     this.firstName = firstName;
     this.lastName = lastName;
     this.address = address;
@@ -33,8 +33,12 @@ public class ContactData {
     this.group = group;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   @Override
@@ -44,14 +48,14 @@ public class ContactData {
 
     ContactData that = (ContactData) o;
 
-    if (!Objects.equals(id, that.id)) return false;
+    if (id != that.id) return false;
     if (!Objects.equals(firstName, that.firstName)) return false;
     return Objects.equals(lastName, that.lastName);
   }
 
   @Override
   public int hashCode() {
-    int result = id != null ? id.hashCode() : 0;
+    int result = id;
     result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
     result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
     return result;
