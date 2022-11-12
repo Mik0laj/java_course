@@ -16,10 +16,10 @@ public class ContactDeletionTest extends TestBase {
     if (app.contact().list().size() == 0) {
       app.goTo().groupPage();
       if (app.group().list().size() == 0) {
-        app.group().create(new GroupData("test1", null, null));
+        app.group().create(new GroupData().withName("test1"));
         app.goTo().homePage();
       }
-      app.contact().create(new ContactData("Name", "Surname", null, null, null, null));
+      app.contact().create(new ContactData().withFirstName("Name").withLastName("Surname"));
     }
   }
 

@@ -4,41 +4,53 @@ import java.util.Objects;
 
 public class ContactData {
   private int id;
-  private final String firstName;
-  private final String lastName;
-  private final String address;
-  private final String phoneNumber;
-  private final String email;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String phoneNumber;
+  private String email;
   private String group;
 
-  public ContactData(int id, String firstName, String lastName, String address, String phoneNumber, String email, String group) {
-    this.id = id;
+
+  public ContactData withFirstName(String firstName) {
     this.firstName = firstName;
-    this.lastName = lastName;
-    this.address = address;
-    this.phoneNumber = phoneNumber;
-    this.email = email;
-    this.group = group;
+    return this;
   }
 
-
-  public ContactData(String firstName, String lastName, String address, String phoneNumber, String email, String group) {
-    this.id = 0;
-    this.firstName = firstName;
+  public ContactData withLastName(String lastName) {
     this.lastName = lastName;
+    return this;
+  }
+
+  public ContactData withAddress(String address) {
     this.address = address;
+    return this;
+  }
+
+  public ContactData withPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  public ContactData withEmail(String email) {
     this.email = email;
+    return this;
+  }
+
+  public ContactData withGroup(String group) {
     this.group = group;
+    return this;
+  }
+
+  public ContactData withId(int id) {
+    this.id = id;
+    return this;
   }
 
   public int getId() {
     return id;
   }
 
-  public void setId(int id) {
-    this.id = id;
-  }
 
   @Override
   public boolean equals(Object o) {
