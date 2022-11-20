@@ -11,6 +11,9 @@ import sii.stqa.pft.addressbook.model.Contacts;
 import java.util.List;
 
 public class ContactHelper extends HelperBase {
+
+  private Contacts contactCache = null;
+
   public ContactHelper(WebDriver wd) {
     super(wd);
   }
@@ -65,6 +68,7 @@ public class ContactHelper extends HelperBase {
     initContactCreation();
     fillContactForm(contact, true);
     submitContactCreation();
+    contactCache=null;
     returnToHomePage();
   }
 
@@ -72,6 +76,7 @@ public class ContactHelper extends HelperBase {
     initContactModification(contact.getId());
     fillContactForm(contact, false);
     submitContactModification();
+    contactCache=null;
     returnToHomePage();
   }
 
@@ -80,6 +85,7 @@ public class ContactHelper extends HelperBase {
     selectContactById(contact.getId());
     deleteSelectedContacts();
     confirmDeletion();
+    contactCache=null;
     returnToHomePage();
   }
 
@@ -93,7 +99,10 @@ public class ContactHelper extends HelperBase {
 
 
   public Contacts all() {
-    Contacts contacts = new Contacts();
+    if (contactCache != null) {
+      return new Contacts(contactCache);
+    }
+    contactCache = new Contacts();
     List<WebElement> elements = wd.findElements((By.name("entry")));
     for (WebElement element : elements) {
       List<WebElement> name = element.findElements((By.tagName("td")));
@@ -102,8 +111,8 @@ public class ContactHelper extends HelperBase {
               .withId(id)
               .withFirstName(name.get(2).getText())
               .withLastName(name.get(1).getText());
-      contacts.add(contact);
+      contactCache.add(contact);
     }
-    return contacts;
+    return new Contacts(contactCache);
   }
 }
