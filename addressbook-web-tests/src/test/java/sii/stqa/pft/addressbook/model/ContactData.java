@@ -15,6 +15,17 @@ public class ContactData {
   private String email3;
   private String allEmails;
   private String allPhones;
+
+  public String getFullName() {
+    return fullName;
+  }
+
+  public ContactData withFullName(String fullName) {
+    this.fullName = fullName;
+    return this;
+  }
+
+  private String fullName;
   private String group;
 
   public String getAllEmails() {

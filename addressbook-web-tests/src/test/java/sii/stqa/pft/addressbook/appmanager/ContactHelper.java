@@ -51,6 +51,10 @@ public class ContactHelper extends HelperBase {
   public void initContactModification(int id) {
     wd.findElement(By.cssSelector("a[href='edit.php?id=" + id + "']")).click();
   }
+  private void goToDetails(int id) {
+    wd.findElement(By.cssSelector("a[href='view.php?id=" + id + "']")).click();
+
+  }
 
   public void submitContactModification() {
     click(By.name("update"));
@@ -148,4 +152,31 @@ public class ContactHelper extends HelperBase {
             .withEmail2(email2)
             .withEmail3(email3);
   }
+
+  public ContactData infoFromDetails(ContactData contact) {
+    goToDetails(contact.getId());
+    String[] content = wd.findElement((By.id("content"))).getText().split("\n");
+
+    String fullName = content[0];
+    String home = content[3];
+    String mobile = content[4];
+    String work = content[5];
+    String address = content[1];
+    String email = content[7];
+    String email2 = content[8];
+    String email3 = content[9];
+    wd.navigate().back();
+    return new ContactData()
+            .withId(contact.getId())
+            .withFullName(fullName)
+            .withHomePhone(home)
+            .withMobilePhone(mobile)
+            .withWorkPhone(work)
+            .withAddress(address)
+            .withEmail(email)
+            .withEmail2(email2)
+            .withEmail3(email3);
+  }
+
+
 }
