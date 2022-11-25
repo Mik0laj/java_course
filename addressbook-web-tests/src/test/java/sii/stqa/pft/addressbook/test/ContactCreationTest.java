@@ -6,6 +6,8 @@ import sii.stqa.pft.addressbook.model.ContactData;
 import sii.stqa.pft.addressbook.model.Contacts;
 import sii.stqa.pft.addressbook.model.GroupData;
 
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -23,7 +25,8 @@ public class ContactCreationTest extends TestBase {
   @Test
   public void testContactCreation() throws Exception {
     Contacts before = app.contact().all();
-    ContactData contact = new ContactData().withFirstName("Name1").withLastName("Surname2");
+    File photo = new File("src/test/resources/pl.png");
+    ContactData contact = new ContactData().withFirstName("Name1").withLastName("Surname2").withPhoto(photo);
     app.contact().create(contact);
     assertThat(app.contact().count(), equalTo(before.size()+1));
     Contacts after = app.contact().all();
@@ -31,7 +34,7 @@ public class ContactCreationTest extends TestBase {
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }
 
-  @Test
+  @Test(enabled = false)
   public void testBadContactCreation() throws Exception {
     Contacts before = app.contact().all();
     ContactData contact = new ContactData().withFirstName("Name1'").withLastName("Surname2'");
