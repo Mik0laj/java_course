@@ -26,7 +26,7 @@ public class ContactDataTest extends TestBase {
       app.contact().create(new ContactData().withFirstName("Name").withLastName("Surname")
               .withHomePhone("111").withMobilePhone("222").withWorkPhone("333")
               .withAddress("12345 Poland,123")
-              .withEmail("abc@abc.pl").withEmail2("qwe@qwe.pl").withEmail3("zxc@zxc.pl"));
+              .withEmail("ab c@abc.pl").withEmail2("qw e@qwe.pl").withEmail3("zx c@zx-c.pl"));
     }
   }
   @Test
@@ -50,7 +50,6 @@ public class ContactDataTest extends TestBase {
   private String mergeEmails(ContactData contact) {
     return Arrays.asList(contact.getEmail(),contact.getEmail2(),contact.getEmail3())
             .stream().filter((s)->!s.equals(""))
-            .map(ContactDataTest::cleaned)
             .collect(Collectors.joining("\n"));
   }
 
