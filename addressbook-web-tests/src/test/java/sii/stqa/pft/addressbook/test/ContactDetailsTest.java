@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import sii.stqa.pft.addressbook.model.ContactData;
 import sii.stqa.pft.addressbook.model.GroupData;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -15,8 +16,8 @@ public class ContactDetailsTest extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.goTo().groupPage();
-    if (app.group().all().size() == 0) {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
       app.group().create(new GroupData().withName("test1"));
       app.goTo().homePage();
     }
@@ -29,7 +30,8 @@ public class ContactDetailsTest extends TestBase {
     ContactData contact = new ContactData().withFirstName("Name").withLastName("Surname")
             .withHomePhone("111").withMobilePhone("222").withWorkPhone("333")
             .withAddress("12345 Poland,123")
-            .withEmail("abc@abc.pl").withEmail2("qwe@qwe.pl").withEmail3("zxc@zxc.pl");
+            .withEmail("abc@abc.pl").withEmail2("qwe@qwe.pl").withEmail3("zxc@zxc.pl")
+            .withPhoto(new File("src/test/resources/pl.png"));
     app.contact().create(contact);
     contact.withId(app.contact().all().stream().mapToInt((c) -> c.getId()).max().getAsInt());
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);

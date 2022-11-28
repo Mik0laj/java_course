@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sii.stqa.pft.addressbook.test.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-28T21:48:22" hostname="DESKTOP-LAA6JF6" time="0.28">
+  <properties/>
+  <testcase name="testContactDeletion" classname="sii.stqa.pft.addressbook.test.ContactDeletionTest" time="0.28"/>
+  <system-out><![CDATA[Hibernate: select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.email as email3_0_, contactdat0_.email2 as email4_0_, contactdat0_.email3 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.home as home7_0_, contactdat0_.lastname as lastname8_0_, contactdat0_.mobile as mobile9_0_, contactdat0_.photo as photo10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_ where deprecated='000-00-00'
+Hibernate: select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.email as email3_0_, contactdat0_.email2 as email4_0_, contactdat0_.email3 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.home as home7_0_, contactdat0_.lastname as lastname8_0_, contactdat0_.mobile as mobile9_0_, contactdat0_.photo as photo10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_ where deprecated='000-00-00'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -159,13 +159,13 @@ public class ContactHelper extends HelperBase {
     String[] content = wd.findElement((By.id("content"))).getText().split("\n");
 
     String fullName = content[0];
-    String home = content[3];
-    String mobile = content[4];
-    String work = content[5];
-    String address = content[1];
-    String email = content[7];
-    String email2 = content[8];
-    String email3 = content[9];
+    String home = content[4];
+    String mobile = content[5];
+    String work = content[6];
+    String address = content[2];
+    String email = content[8];
+    String email2 = content[9];
+    String email3 = content[10];
     wd.navigate().back();
     return new ContactData()
             .withId(contact.getId())
