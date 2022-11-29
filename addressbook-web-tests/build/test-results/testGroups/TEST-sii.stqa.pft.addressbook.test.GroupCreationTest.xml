@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sii.stqa.pft.addressbook.test.GroupCreationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-28T08:52:41" hostname="DESKTOP-LAA6JF6" time="17.918">
+<testsuite name="sii.stqa.pft.addressbook.test.GroupCreationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-29T07:30:22" hostname="DESKTOP-LAA6JF6" time="5.526">
   <properties/>
-  <testcase name="testBadGroupCreation" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="5.965"/>
-  <testcase name="testGroupCreation[0](GroupData{id='0', name='test 0'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="4.442"/>
-  <testcase name="testGroupCreation[1](GroupData{id='0', name='test 1'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="3.796"/>
-  <testcase name="testGroupCreation[2](GroupData{id='0', name='test 2'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="3.641"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testBadGroupCreation" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="1.336"/>
+  <testcase name="testGroupCreation[0](GroupData{id='0', name='test 0'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="1.732"/>
+  <testcase name="testGroupCreation[1](GroupData{id='0', name='test 1'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="1.264"/>
+  <testcase name="testGroupCreation[2](GroupData{id='0', name='test 2'})" classname="sii.stqa.pft.addressbook.test.GroupCreationTest" time="1.128"/>
+  <system-out><![CDATA[08:30:23.398 [Test worker] INFO  o.h.h.i.QueryTranslatorFactoryInitiator -%PARSER_ERROR[kvp]- HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

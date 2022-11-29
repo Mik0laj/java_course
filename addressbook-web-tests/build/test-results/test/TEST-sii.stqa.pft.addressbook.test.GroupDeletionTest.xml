@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sii.stqa.pft.addressbook.test.GroupDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-28T21:48:34" hostname="DESKTOP-LAA6JF6" time="0.494">
-  <properties/>
-  <testcase name="testGroupDeletion" classname="sii.stqa.pft.addressbook.test.GroupDeletionTest" time="0.494"/>
-  <system-out><![CDATA[Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
-Hibernate: select groupdata0_.group_id as group_id1_1_, groupdata0_.group_footer as group_fo2_1_, groupdata0_.group_header as group_he3_1_, groupdata0_.group_name as group_na4_1_ from group_list groupdata0_
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
