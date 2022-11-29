@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import sii.stqa.pft.addressbook.model.ContactData;
 import sii.stqa.pft.addressbook.model.Contacts;
+import sii.stqa.pft.addressbook.model.GroupData;
 
 import java.util.List;
 
@@ -39,7 +40,10 @@ public class ContactHelper extends HelperBase {
     attach(By.name("photo"),contactData.getPhoto());
 
     if (creation) {
-      new Select(wd.findElement(By.name("new_group"))).selectByIndex(1);
+      if(contactData.getGroups().size()>0){
+        Assert.assertTrue(contactData.getGroups().size()==1);
+        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
+      }
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
@@ -179,5 +183,20 @@ public class ContactHelper extends HelperBase {
             .withEmail3(email3);
   }
 
+  public void addToGroup(ContactData contact, GroupData group){
+    selectContactById(contact.getId());
+    wd.findElement(By.name("to_group")).click();
+    wd.findElement(By.name("to_group")).findElement(By.cssSelector("option[value='" + group.getId() + "']")).click();
+    wd.findElement(By.name("add")).click();
+    wd.navigate().back();
+  }
 
+
+  public void removeGroup(ContactData contact, GroupData group) {
+    wd.findElement(By.name("group")).click();
+    wd.findElement(By.name("group")).findElement(By.cssSelector("option[value='" + group.getId() + "']")).click();
+    selectContactById(contact.getId());
+    wd.findElement(By.name("remove")).click();
+    wd.navigate().back();
+  }
 }

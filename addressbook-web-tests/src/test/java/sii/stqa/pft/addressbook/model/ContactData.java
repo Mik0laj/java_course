@@ -70,6 +70,7 @@ public class ContactData {
   @JoinTable(name="address_in_groups",joinColumns = @JoinColumn(name="id"),inverseJoinColumns = @JoinColumn(name="group_id"))
   private Set<GroupData> groups = new HashSet<GroupData>();
 
+
   @Override
   public String toString() {
     return "ContactData{" +
@@ -258,5 +259,11 @@ public class ContactData {
 
   public Groups getGroups() {
     return new Groups(groups);
+  }
+
+  public ContactData inGroup(GroupData group) {
+    groups.add(group);
+    return this;
+
   }
 }
